@@ -1,0 +1,31 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Tutoring Calculator";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Learn more about Aubrey Fails</h1>
+<p>If you would like to learn even more about Aubrey Fails (Hint: YOU DO!!) fill out the information below to find the price.</p>
+
+<h2>Tutoring Calculator</h2>
+
+<form id="tutoringCalculatorForm">
+    <label for="hoursInput">Enter number of hours:</label>
+    <input type="number" id="hoursInput" name="hours" min="1" required>
+    <br>
+    <label for="hourlyRate">Hourly rate: $30</label>
+    <br>
+    <button type="button" id="calculateButton">Calculate Total</button>
+    <br>
+    <label for="totalCost">Total cost:</label>
+    <input type="text" id="totalCost" readonly>
+</form>
+
+<a href="@Url.Action("Index", "Home")">Back to Home</a>
+
+@section Scripts {
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/tutoringcalculator.js"></script>
+}
